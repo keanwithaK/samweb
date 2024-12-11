@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        body {
+            background-color: #1C1C2A;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile img {
+            width: 20%;
+            height: 20%;
+            border-radius: 100%;
+        }
+        .profile-info {
+            max-width: 60%;
+        }
+        .profile-info h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .artworks {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .artwork {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        .artwork:hover {
+            transform: scale(1.05);
+        }
+        .artwork img {
+            width: 40%;
+            height: 50%;
+            border-radius: 10px;
+        }
+        .artwork h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        .artwork p {
+            margin: 0;
+            font-size: 16px;
+        }
+        /* Feedback Form Styles */
+        .feedback-form {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #2A2A3C;
+            border-radius: 10px;
+        }
+        .feedback-form h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .feedback-form input, 
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background-color: #45A049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-info">
+                <h1>Kean</h1>
+                <p>Samantha Marie N. Lopez</p>
+                <p>Artist | Digital and Traditional</p>
+            </div>
+            <img src="../imagess/profile.jpg" alt="Kean's Profile Picture">
+        </div>
+
+        <!-- Artwork Categories -->
+        <h2 class="section-title">Latest Work</h2>
+        <div class="artworks">
+            <div class="artwork">
+                <img src="../imagess/gibayaw.png" alt="Gibayaw">
+                <h3>Gibayaw</h3>
+                <p>10x10 inches</p>
+            </div>
+            <div class="artwork">
+                <img src="../imagess/all good things.png" alt="All Good Things">
+                <h3>All Good Things</h3>
+                <p>10x10 inches</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Canvas</h2>
+        <div class="artworks">
+            <div class="artwork">
+                <img src="../imagess/mors-passionis.png" alt="Mors Passionis">
+                <h3>Mors Passionis</h3>
+                <p>20x30 cm</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Photoshop</h2>
+        <div class="artworks">
+            <div class="artwork">
+                <img src="../imagess/jhwn.jpg" alt="Photoshop Work">
+                <p>This Man</p>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="feedback-form">
+            <h2>Feedback Form</h2>
+            <form action="process_feedback.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Your feedback..." required></textarea>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
